@@ -138,6 +138,19 @@ int main(int, char**)
             ImGui::End();
         }
 
+        // Show a window to configure formula calculator
+
+        {
+            static int mass_low = 60;
+
+            ImGui::Begin("Configurations");
+
+            ImGui::Text("Range of mass list");
+            ImGui::SliderInt2("Mass", &mass_low, 60, 1000);
+
+            ImGui::End();
+        }
+
         // 3. Show another simple window.
         if (show_another_window)
         {
